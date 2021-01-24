@@ -1,13 +1,5 @@
 version: "3.7"
 services:
-  
-  # Microservizio e porta 
-
-  # Book 8122 
-  # Customer 8104 
-  # Notification 8105
-  # Borrow 8103
-  
   ################################# http://localhost:8122/book-service/v2/book
 
   book-ms: 
