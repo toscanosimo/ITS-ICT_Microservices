@@ -1,0 +1,2 @@
+fullnameOverride: kibana
+elasticsearchHosts: "http://elasticsearch:9200"

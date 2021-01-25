@@ -15,7 +15,7 @@ jobs:
     runs-on: ubuntu-latest
     defaults:
       run:
-        working-directory: labs/02-eCommerce_microservices/customer
+        working-directory: assignments/01-Library_application/mysolution/customer
     steps:
     - uses: actions/checkout@v2
     - name: Add hosts to /etc/hosts
@@ -30,8 +30,8 @@ jobs:
     - name: Build and push Docker image
       uses: docker/build-push-action@v1.1.0 
       with:
-        path: labs/02-eCommerce_microservices/customer/
-        dockerfile: labs/02-eCommerce_microservices/customer/Dockerfile
+        path: assignments/01-Library_application/mysolution/customer/
+        dockerfile: assignments/01-Library_application/mysolution/customer/Dockerfile
         username: ${{ secrets.DOCKER_USERNAME }}
         password: ${{ secrets.DOCKER_PASSWORD }}
         repository: ${{ secrets.DOCKER_USERNAME }}/customer
@@ -43,7 +43,7 @@ jobs:
     runs-on: ubuntu-latest
     defaults:
       run:
-        working-directory: labs/02-eCommerce_microservices/order
+        working-directory: assignments/01-Library_application/mysolution/order
     steps:
     - uses: actions/checkout@v2
     - name: Add hosts to /etc/hosts
@@ -58,8 +58,8 @@ jobs:
     - name: Build and push Docker image
       uses: docker/build-push-action@v1.1.0 
       with:
-        path: labs/02-eCommerce_microservices/order/
-        dockerfile: labs/02-eCommerce_microservices/order/Dockerfile
+        path: assignments/01-Library_application/mysolution/order/
+        dockerfile: assignments/01-Library_application/mysolution/order/Dockerfile
         username: ${{ secrets.DOCKER_USERNAME }}
         password: ${{ secrets.DOCKER_PASSWORD }}
         repository: ${{ secrets.DOCKER_USERNAME }}/order
@@ -71,7 +71,7 @@ jobs:
     runs-on: ubuntu-latest
     defaults:
       run:
-        working-directory: labs/02-eCommerce_microservices/notification
+        working-directory: assignments/01-Library_application/mysolution/notification
     steps:
     - uses: actions/checkout@v2
     - name: Add hosts to /etc/hosts
@@ -86,8 +86,8 @@ jobs:
     - name: Build and push Docker image
       uses: docker/build-push-action@v1.1.0 
       with:
-        path: labs/02-eCommerce_microservices/notification/
-        dockerfile: labs/02-eCommerce_microservices/notification/Dockerfile
+        path: assignments/01-Library_application/mysolution/notification/
+        dockerfile: assignments/01-Library_application/mysolution/notification/Dockerfile
         username: ${{ secrets.DOCKER_USERNAME }}
         password: ${{ secrets.DOCKER_PASSWORD }}
         repository: ${{ secrets.DOCKER_USERNAME }}/notification
